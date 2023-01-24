@@ -20,6 +20,70 @@
   <body>
     <!----------- Header------ -->
     <header class="header">
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-container">
+          <button class="mobile-menu-close" data-menu-close>
+            <svg class="mobile-menu-close__icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-item">
+              <a class="link link-current" href="./index.html">Studio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="link" href="#">Contacts</a>
+            </li>
+          </ul>
+          <ul class="mobile-address-list list">
+            <li class="mobile-item-tel">
+              <a class="mobile-link-address" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-item-mail">
+              <a
+                class="mobile-link-address color"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social-list list">
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-link">
+                <svg class="mobile-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-link">
+                <svg class="mobile-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-link">
+                <svg class="mobile-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-item">
+              <a href="" class="mobile-social-link">
+                <svg class="mobile-social-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <!-- ------Navigation----- -->
       <div class="container page-header-container">
         <nav class="navigation">
@@ -36,6 +100,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-open" data-menu-open>
+          <svg class="mobile-menu-open__icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-mobile-menu-open"></use>
+          </svg>
+        </button>
         <!-- -------Address------- -->
         <address class="address">
           <a class="link-address tel" href="mailto:info@devstudio.com"
@@ -114,36 +183,87 @@
         </div>
       </section>
       <!------------- Product--------- -->
-      <section class="page-container">
+      <section class="page-container product">
         <div class="container">
           <h2 class="section-title">What are we doing</h2>
           <ul class="list product-list">
             <li class="product-item">
-              <img
-                class="product-foto"
-                src="./images/product/desktop.jpg"
-                alt="desktop"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/product/desktop.webp    1x,
+                    ./images/product/desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/product/desktop.jpg    1x,
+                    ./images/product/desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="product-foto"
+                  src="./images/product/desktop.jpg"
+                  alt="desktop"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="product-item">
-              <img
-                class="product-foto"
-                src="./images/product/app.jpg"
-                alt="app"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/product/app.webp    1x,
+                    ./images/product/app@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/product/app.jpg    1x,
+                    ./images/product/app@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="product-foto"
+                  src="./images/product/app.jpg"
+                  alt="app"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="product-item">
-              <img
-                class="product-foto"
-                src="./images/product/mobile.jpg"
-                alt="mobile"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/product/mobile.webp    1x,
+                    ./images/product/mobile@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/product/mobile.jpg    1x,
+                    ./images/product/mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="product-foto"
+                  src="./images/product/mobile.jpg"
+                  alt="mobile"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -154,16 +274,31 @@
           <h2 class="section-title">Our Team</h2>
           <ul class="list member-list">
             <li class="team-member">
-              <img
-                class="member-foto"
-                src="./images/team/mark-guerrero.jpg"
-                alt="photo by mark-guerrero"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mark-guerrero.webp    1x,
+                    ./images/team/mark-guerrero@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mark-guerrero.jpg    1x,
+                    ./images/team/mark-guerrero@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="member-foto"
+                  src="./images/team/mark-guerrero.jpg"
+                  alt="photo by mark-guerrero"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="member-card">
-                <h3 class="main-title">Mark Guerrero</h3>
-                <p class="main-text">Product Designer</p>
+                <h3 class="main-title team-title">Mark Guerrero</h3>
+                <p class="main-text team-text">Product Designer</p>
                 <ul class="social-list list">
                   <li class="social-item">
                     <a href="" class="social-link">
@@ -197,16 +332,31 @@
               </div>
             </li>
             <li class="team-member">
-              <img
-                class="member-foto"
-                src="./images/team/tom-ford.jpg"
-                alt="photo by tom-ford"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/tom-ford.webp    1x,
+                    ./images/team/tom-ford@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tom-ford.jpg    1x,
+                    ./images/team/tom-ford@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="member-foto"
+                  src="./images/team/tom-ford.jpg"
+                  alt="photo by tom-ford"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="member-card">
-                <h3 class="main-title">Tom Ford</h3>
-                <p class="main-text">Frontend Developer</p>
+                <h3 class="main-title team-title">Tom Ford</h3>
+                <p class="main-text team-text">Frontend Developer</p>
                 <ul class="social-list list">
                   <li class="social-item">
                     <a href="" class="social-link">
@@ -240,16 +390,31 @@
               </div>
             </li>
             <li class="team-member">
-              <img
-                class="member-foto"
-                src="./images/team/camila-garcia.jpg"
-                alt="photo by camila-garcia"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/camila-garcia.webp    1x,
+                    ./images/team/camila-garcia@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/camila-garcia.jpg    1x,
+                    ./images/team/camila-garcia@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="member-foto"
+                  src="./images/team/camila-garcia.jpg"
+                  alt="photo by camila-garcia"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="member-card">
-                <h3 class="main-title">Camila Garcia</h3>
-                <p class="main-text">Marketing</p>
+                <h3 class="main-title team-title">Camila Garcia</h3>
+                <p class="main-text team-text">Marketing</p>
                 <ul class="social-list list">
                   <li class="social-item">
                     <a href="" class="social-link">
@@ -283,16 +448,31 @@
               </div>
             </li>
             <li class="team-member">
-              <img
-                class="member-foto"
-                src="./images/team/daniel-wilson.jpg"
-                alt="photo by daniel-wilson"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/daniel-wilson.webp    1x,
+                    ./images/team/daniel-wilson@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/daniel-wilson.jpg    1x,
+                    ./images/team/daniel-wilson@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="member-foto"
+                  src="./images/team/daniel-wilson.jpg"
+                  alt="photo by daniel-wilson"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="member-card">
-                <h3 class="main-title">Daniel Wilson</h3>
-                <p class="main-text">UI Designer</p>
+                <h3 class="main-title team-title">Daniel Wilson</h3>
+                <p class="main-text team-text">UI Designer</p>
                 <ul class="social-list list">
                   <li class="social-item">
                     <a href="" class="social-link">
@@ -330,7 +510,7 @@
       </section>
       <!------------------------- Customers ------------------------>
       <section class="page-customers-container">
-        <div class="container">
+        <div class="container customers-container-tablet">
           <h2 class="section-title">Customers</h2>
           <ul class="customers-list list">
             <li class="customers-item">
@@ -386,7 +566,7 @@
     <footer class="footer">
       <div class="container page-footer-container">
         <div class="web">
-          <a class="studio-logo" href="./index.html">
+          <a class="studio-logo footer-studio" href="./index.html">
             <span class="logo">Web</span>
             <span class="studio">Studio</span>
           </a>
@@ -428,22 +608,27 @@
             </li>
           </ul>
         </div>
-        <div>
-        <form class="footer-form">
-          <label>
-          <span class="footer-description footer-text-form">Subscribe</span>
-          <input type="email" name="user_email" class="footer-input" placeholder="E-mail">
-          </label>
-          <button type="submit" class="footer-btn footer-text-form">Subscribe
-            <svg width="24" height="24">
-              <use href="./images/icons.svg#icon-plane"></use>
-            </svg>
-          </button>
-        </form>
+        <div class="footer-form-wrapper">
+          <form class="footer-form">
+            <label>
+              <span class="footer-description footer-text-form">Subscribe</span>
+              <input
+                type="email"
+                name="user_email"
+                class="footer-input"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="footer-btn footer-text-form">
+              Subscribe
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-plane"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
-    </div>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button class="btn-modal" type="button" data-modal-close>
@@ -492,5 +677,6 @@
           </form>
           </div>
   </body>
+  <script src="./js/mobile-menu.js"></script>
   <script src="./js/modal.js"></script>
 </html>
